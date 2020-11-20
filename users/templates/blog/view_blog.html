@@ -1,0 +1,12 @@
+{% extends "blog_base.html" %}
+
+{% block content %}
+<h1>{{blog.title}}</h1>
+
+{{blog.content|safe}}
+
+<hr/>
+
+<a href="{% url 'edit_blog' blog.id %}">Edit</a>
+<a href="{% url 'listing' %}">All Blogs</a>
+{% endblock content %}
